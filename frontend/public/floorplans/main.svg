@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#12151c"/>
+  <rect x="40" y="40" width="720" height="420" fill="none" stroke="#3a4053" stroke-width="3"/>
+  <line x1="400" y1="40" x2="400" y2="460" stroke="#3a4053" stroke-width="2"/>
+  <line x1="40" y1="260" x2="400" y2="260" stroke="#3a4053" stroke-width="2"/>
+  <text x="400" y="250" fill="#5a6178" font-family="sans-serif" font-size="20" text-anchor="middle">
+    PLACEHOLDER — replace with real main floor plan
+  </text>
+</svg>

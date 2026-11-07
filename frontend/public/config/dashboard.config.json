@@ -1,0 +1,64 @@
+{
+  "idleTimeoutSeconds": 60,
+
+  "primaryWeatherEntity": "weather.openweathermap",
+
+  "weatherSources": [
+    { "label": "OpenWeather", "entity": "weather.openweathermap" },
+    { "label": "Environment Canada", "entity": "weather.environment_canada" },
+    { "label": "Ecowitt Station", "entity": "weather.ecowitt" }
+  ],
+
+  "airQuality": [
+    { "label": "AQI", "entity": "sensor.openweathermap_air_quality" },
+    { "label": "PM2.5", "entity": "sensor.ecowitt_pm25" }
+  ],
+
+  "pollen": [
+    { "label": "Tree Pollen", "entity": "sensor.tree_pollen" },
+    { "label": "Grass Pollen", "entity": "sensor.grass_pollen" },
+    { "label": "Weed Pollen", "entity": "sensor.weed_pollen" }
+  ],
+
+  "cameras": [
+    { "label": "Front Door", "entity": "camera.front_door" },
+    { "label": "Backyard", "entity": "camera.backyard" },
+    { "label": "Driveway", "entity": "camera.driveway" }
+  ],
+
+  "utilities": [
+    { "label": "Power Usage", "entity": "sensor.power_usage", "unit": "W" },
+    { "label": "Water Flow", "entity": "sensor.water_flow", "unit": "L/min" },
+    { "label": "Main Water Valve", "entity": "switch.water_main_valve" }
+  ],
+
+  "floors": [
+    {
+      "id": "main",
+      "label": "Main Floor",
+      "plan": "/floorplans/main.svg",
+      "entities": [
+        { "entity_id": "light.living_room", "type": "light", "x": 30, "y": 55 },
+        { "entity_id": "light.kitchen", "type": "light", "x": 62, "y": 40 },
+        { "entity_id": "climate.main_floor", "type": "climate", "x": 48, "y": 65 },
+        { "entity_id": "lock.front_door", "type": "lock", "x": 20, "y": 30 }
+      ]
+    },
+    {
+      "id": "upper",
+      "label": "Upper Floor",
+      "plan": "/floorplans/upper.svg",
+      "entities": [
+        { "entity_id": "light.primary_bedroom", "type": "light", "x": 25, "y": 30 },
+        { "entity_id": "light.bedroom_2", "type": "light", "x": 65, "y": 30 },
+        { "entity_id": "climate.upper_floor", "type": "climate", "x": 48, "y": 60 }
+      ]
+    },
+    {
+      "id": "basement",
+      "label": "Basement",
+      "plan": "/floorplans/basement-placeholder.svg",
+      "entities": []
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+:root {
+  /* Color */
+  --bg: #101319;
+  --surface: #1a1e27;
+  --surface-elevated: #232837;
+  --divider: #2a3040;
+  --text: #edeef2;
+  --text-muted: #8b93a7;
+  --accent: #e8a94c;       /* warm amber — active / "on" / wake */
+  --accent-dim: #6b5636;
+  --cool: #5fb8c9;         /* teal — utilities, water, info */
+  --good: #7cc894;         /* healthy air quality, unlocked-safe states */
+  --alert: #e2635a;        /* unlocked door, high pollen, faults */
+
+  /* Type */
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* fixed-size wall panel, no scroll chrome */
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  user-select: none; /* touch panel, not a text-selection surface */
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

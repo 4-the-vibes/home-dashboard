@@ -1,0 +1,17 @@
+services:
+  ha-dashboard:
+    build: .
+    container_name: ha-dashboard
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      HA_URL: ${HA_URL}
+      HA_TOKEN: ${HA_TOKEN}
+      PORT: 8080
+    # Mount the config and floor plan images so they can be edited/replaced
+    # without rebuilding the image. Recommended once you have real floor
+    # plans and entity IDs to drop in.
+    volumes:
+      - ./frontend/public/config/dashboard.config.json:/app/public/config/dashboard.config.json:ro
+      - ./frontend/public/floorplans:/app/public/floorplans:ro
